@@ -1,0 +1,16 @@
+extends layout
+
+block content                        
+        .panel.panel-default
+            .panel-heading Currently Subscribed
+            .panel-body    
+                table.table.table-hover
+                    thead
+                        tr
+                            th Tag Name
+                            th Tag Display Name
+                    tbody
+                        each tag in tags
+                            tr
+                                td= tag.Id 
+                                td= tag.DisplayName 

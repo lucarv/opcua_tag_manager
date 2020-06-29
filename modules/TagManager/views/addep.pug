@@ -1,0 +1,22 @@
+extends layout
+
+block content                        
+        .panel.panel-default
+            .panel-heading Available Endpoints  
+            .panel-body    
+              form(action='/addep', method='post')
+                fieldset
+                  .form-group.row
+                      .col-sm-12  
+                          input.form-control(type='text', name='EndPointUrl', placeholder='endpoint url') 
+                  .form-group.row
+                      .col-sm-4 
+                          input.form-control(type='text', name='UserSecurity', placeholder='user security')  
+                      .col-sm-4 
+                          input.form-control(type='text', name='OpcAuthenticationUsername', placeholder='opc server username')  
+                      .col-sm-4 
+                          input.form-control(type='text', name='OpcAuthenticationPassword', placeholder='opc server password')      
+            .panel-heading  
+            .panel-body                                                                                                     
+                      .col-sm-2
+                        button.btn.btn-default(type='submit') add endpoint
