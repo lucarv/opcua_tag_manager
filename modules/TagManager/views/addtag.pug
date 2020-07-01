@@ -2,26 +2,26 @@ extends layout
 
 block content                        
         .panel.panel-default
-            .panel-heading Available Endpoints  
-            .panel-body    
-              form(action='/', method='post', id='tags')
-
-                fieldset
-                  .form-group.row
-                      .col-sm-3
-                          input.form-control(type='text', name='Id', placeholder='namespace') 
-                      .col-sm-3    
-                        input.form-control(type='number', name='OpcSamplingInterval', placeholder='sampling interval') 
-                      .col-sm-3    
-                        input.form-control(type='number', name='OpcPublishingInterval', placeholder='uploading interval')                                 
-                      .col-sm-3    
-                        input.form-control(type='text', name='DisplayName', placeholder='display name')  
+            .panel-heading ADD TAGS 
+            .panel-body
+                form(action='/addtag', method='post')
+                    fieldset
+                        .form-group.row
+                            .col-sm-3
+                                input.form-control(type='text', name='Id', placeholder='namespace') 
+                            .col-sm-3    
+                                input.form-control(type='number', name='OpcSamplingInterval', placeholder='sampling interval') 
+                            .col-sm-3    
+                                input.form-control(type='number', name='OpcPublishingInterval', placeholder='uploading interval')                                 
+                            .col-sm-3    
+                                input.form-control(type='text', name='DisplayName', placeholder='display name')  
+                        .form-group.row
+                            .col-sm-2
+                                button.btn.btn-default(type='submit') add tag  
             .panel-heading   
             .panel-body                         
-                  .form-group.row
-                      .col-sm-2
-                        button.btn.btn-default(type='submit', formaction='addtag') add tag   
-                      .col-sm-2
-                        button.btn.btn-default(type='submit', formaction='committags') submit tags                      
-
-                    
+                form(action='/committ', method='post')
+                    fieldset 
+                        .form-group.row
+                            .col-sm-2
+                                button.btn.btn-default(type='submit') submit tags  

@@ -2,8 +2,13 @@ extends layout
 
 block content                        
         .panel.panel-default
-            .panel-heading Currently Subscribed
-            .panel-body    
+            .panel-heading CURRENTLY SUBSCRIBED 
+            .panel-body  
+                label Endpoint URL
+                br
+                input#name(type='text' name='name' readonly='' placeholder=url size='100')
+                br
+                br
                 table.table.table-hover
                     thead
                         tr
