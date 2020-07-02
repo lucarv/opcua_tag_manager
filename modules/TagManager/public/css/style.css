@@ -35,7 +35,8 @@ body {
 }
 
 .btn-space {
-    width: 70px !important;    }
+  margin-right: 5px;
+}
 
 .input-dev {
     padding-right: 10px;

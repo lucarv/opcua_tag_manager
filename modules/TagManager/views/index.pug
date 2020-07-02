@@ -1,0 +1,20 @@
+extends layout
+
+block content                        
+    .panel.panel-default
+        .panel-heading TAG MANAGER
+        .panel-body 
+            .row
+                .col-md-12
+                    p A very simple and rudimentary app to add a web interface to manage the Azure OPC UA publisher module.   
+                    p It allows for edit the published nodes that are not managed by opc twin.  
+                    br
+                    p DISCLAIMER: Purely experminetal and not thoroughly tested.  
+                    p DO NOT navigate using the browser BACK/FORWARD buttons or you will lose context
+
+    .panel.panel-default
+        .panel-heading STATUS
+        .panel-body 
+            .row
+                .col-md-12
+                    input#name(type='text' name='name' readonly='' placeholder=message size='125')

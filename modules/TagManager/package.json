@@ -8,7 +8,7 @@
     },
     "scripts": {
         "start": "node ./bin/www"
-      },
+    },
     "license": "MIT",
     "dependencies": {
         "azure-iot-device": "^1.11.0",

@@ -1,0 +1,19 @@
+extends layout
+
+block content                        
+        .panel.panel-default
+            .panel-heading UPLOAD FILE  
+            .panel-body    
+                form(action='/', method='post', id='list')
+                    fieldset
+                        .row
+                            .col-md-12
+                                textarea(name='file' rows='10' cols='120')
+            .panel-heading
+            .panel-body                              
+                    .row                        
+                        .col-md-12
+                            button.btn.btn-default.btn-space(type='submit', form='list' formaction='/replace')  replace
+                            button.btn.btn-default.btn-space(type='submit', form='list' formaction='/append')  append
+
+                    

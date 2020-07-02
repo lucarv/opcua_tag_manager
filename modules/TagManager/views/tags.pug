@@ -6,7 +6,7 @@ block content
             .panel-body  
                 label Endpoint URL
                 br
-                input#name(type='text' name='name' readonly='' placeholder=url size='100')
+                input#name(type='text' name='name' readonly='' placeholder=url size='125')
                 br
                 br
                 table.table.table-hover
@@ -19,3 +19,26 @@ block content
                             tr
                                 td= tag.Id 
                                 td= tag.DisplayName 
+        .panel.panel-default
+            .panel-heading ADD NEW TAG
+            .panel-body  
+                form(action='/newtag', method='post')
+                    fieldset
+                        .form-group.row
+                            .col-sm-3
+                                input.form-control(type='text', name='Id', placeholder='namespace') 
+                            .col-sm-3    
+                                input.form-control(type='number', name='OpcSamplingInterval', placeholder='sampling interval') 
+                            .col-sm-3    
+                                input.form-control(type='number', name='OpcPublishingInterval', placeholder='uploading interval')                                 
+                            .col-sm-3    
+                                input.form-control(type='text', name='DisplayName', placeholder='display name')  
+                        .form-group.row
+                            .col-sm-2
+                                button.btn.btn-default(type='submit') add tag  
+
+        .panel.panel-default
+            .panel-heading REMOVE TAG
+            .panel-body  
+                p Not yet implemented
+                p To remove a tag you need to remove the endpoint and add again less the tag you want to remove                            

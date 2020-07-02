@@ -8,15 +8,14 @@ block content
                   fieldset
                     .row
                       .col-md-12
-                        select.browser-default.custom-select#id(name='id')
+                        select.browser-default.custom-select#id(name='id' width='130')
                           each endpoint in endpoints
                             option(value=endpoint.id) #{endpoint.url}
             .panel-heading
             .panel-body                              
                     .row                        
-                      .col-md-3
-                        button.btn.btn-default(type='submit', form='list' formaction='/list')  list tags »
-                      .col-md-3
-                        button.btn.btn-danger(type='submit', form='list' formaction='/delete')  remove endpoint »
-
+                      .col-md-12
+                        button.btn.btn-default.btn-space(type='submit', form='list' formaction='/list')  list tags
+                        button.btn.btn-danger.btn-space(type='submit', form='list' formaction='/delete')  remove server
+                        button.btn.btn-danger.btn-space(type='submit', form='list' formaction='/purge')  purge
                     
